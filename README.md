@@ -76,7 +76,7 @@ MATCH p = shortestPath((:GHUser) - [*1..] ->(:ATJobTemplate)) RETURN p
 ```
 usage: deceptionClone.py [-h] [--in IN_PATH] [--out OUT_PATH] [--pretty] {clone-node,clone-edge,decept-node,decept-edge,attach-deception,register-icon,merge-graphs} ...
 
-OpenGraph deception utility (clone / mark / attach / icon).
+OpenGraph deception utility for manipulating nodes, edges, and graphs.
 
 positional arguments:
   {clone-node,clone-edge,decept-node,decept-edge,attach-deception,register-icon,merge-graphs}
