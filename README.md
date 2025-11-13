@@ -1,12 +1,14 @@
 # OpenGraph Deception Utility
 
-For graph operations, both `--in` and `--out` are **required** and are the first two args passed.
-
-**Exception:** `register-icon` and `merge` do **not** use `--in/--out`.
+This is a small tool for modifying and interacting with OpenGraph projects. The main purpose is to visualize deception technologies. Additionally, we can merge graphs and correlate objects to produce a larger interconnected graph. 
 
 ---
 
 ## Basic Examples
+
+For graph operations, both `--in` and `--out` are **required** and are the first two args passed.
+
+**Exception:** `register-icon` and `merge` do **not** use `--in/--out`.
 
 Using the base minimum OpenGraph implementation, this example adds a deception node and edge. The example data can be found under the examples folder. To get our icons to show up as Font Awesome icons and not "?" marks, we can use the following command to load the icons:
 ```
