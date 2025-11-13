@@ -1,0 +1,75 @@
+{
+"metadata": {
+    "source_kind": "TestBase"
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "123",
+        "kinds": [
+          "Person",
+          "Base"
+        ],
+        "properties": {
+          "displayname": "bob",
+          "type": "User",
+          "property": "a",
+          "objectid": "123",
+          "name": "BOB"
+        }
+      },
+      {
+        "id": "234",
+        "kinds": [
+          "Person",
+          "Base"
+        ],
+        "properties": {
+          "displayname": "alice",
+          "type": "User",
+          "property": "b",
+          "objectid": "234",
+          "name": "ALICE"
+        }
+      },
+      {
+        "id": "567",
+        "kinds": [
+          "Asset",
+          "Base"
+        ],
+        "properties": {
+          "displayname": "cash",
+          "type": "Asset",
+          "property": "c",
+          "objectid": "567",
+          "name": "CASH"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "kind": "Knows",
+        "start": {
+          "value": "123",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "234",
+          "match_by": "id"
+        }
+      },
+      {
+        "kind": "Has",
+        "start": {
+          "value": "234",
+          "match_by": "id"
+        },
+        "end": {
+          "value": "567",
+          "match_by": "id"
+        }
+      }
+    ]
+  }
+}

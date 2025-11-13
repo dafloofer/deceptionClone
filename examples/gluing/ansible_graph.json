@@ -1,0 +1,189 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "id": "17b5f0743c31cc14dfcb9d46a637fe5dcf1f9396-deception",
+        "kinds": ["ATOrganization"],
+        "properties": {
+          "custom_virtualenv": "",
+          "default_environment": "0",
+          "description": "Deception STAGE ORG",
+          "id": "16",
+          "max_hosts": "0",
+          "name": "STAGE ORG",
+          "url": "/api/v2/organizations/16/"
+        }
+      },
+      {
+        "id": "stage-team-0001",
+        "kinds": ["ATTeam"],
+        "properties": {
+          "created": "2025-08-10T14:09:00Z",
+          "description": "Deception STAGE team",
+          "id": "16",
+          "modified": "2025-08-10T14:09:00Z",
+          "name": "STAGE",
+          "type": "team",
+          "url": "/api/v2/teams/16/"
+        }
+      },
+      {
+        "id": "deploy-stage-template-0001",
+        "kinds": ["Deception", "ATJobTemplate"],
+        "properties": {
+          "allow_simultaneous": "false",
+          "ask_credential_on_launch": "false",
+          "ask_diff_mode_on_launch": "false",
+          "ask_execution_environment_on_launch": "false",
+          "ask_forks_on_launch": "false",
+          "ask_instance_groups_on_launch": "false",
+          "ask_inventory_on_launch": "false",
+          "ask_job_slice_count_on_launch": "false",
+          "ask_job_type_on_launch": "false",
+          "ask_labels_on_launch": "false",
+          "ask_limit_on_launch": "false",
+          "ask_scm_branch_on_launch": "false",
+          "ask_tags_on_launch": "false",
+          "ask_timeout_on_launch": "false",
+          "ask_variables_on_launch": "false",
+          "ask_verbosity_on_launch": "false",
+          "become_enabled": "false",
+          "custom_virtualenv": "",
+          "description": "Deception deploy job for STAGE",
+          "diff_mode": "false",
+          "execution_environment": "0",
+          "extra_vars": "---",
+          "force_handler": "false",
+          "forks": "0",
+          "host_config_key": "",
+          "id": "901",
+          "job_slice_count": "1",
+          "job_tags": "",
+          "job_type": "run",
+          "last_job_failed": "false",
+          "last_job_run": "",
+          "limit": "",
+          "name": "Deploy Stage",
+          "next_job_run": "",
+          "organization": "16",
+          "playbook": "helloworld.yml",
+          "prevent_instance_group_fallback": "false",
+          "project": "0",
+          "scm_branch": "",
+          "scm_revision": "",
+          "skip_tags": "",
+          "start_at_task": "",
+          "status": "ok",
+          "survey_enabled": "false",
+          "timeout": "0",
+          "url": "/api/v2/job_templates/901/",
+          "use_fact_cache": "false",
+          "verbosity": "0",
+          "webhook_credential": "0",
+          "webhook_service": ""
+        }
+      },
+      {
+        "id": "randy-user-0001",
+        "kinds": ["ATUser"],
+        "properties": {
+          "description": "",
+          "email": "",
+          "external_account": "",
+          "firstname": "Randy",
+          "id": "98",
+          "is_super_user": "false",
+          "is_system_auditor": "false",
+          "last_login": "",
+          "lastname": "",
+          "ldap_dn": "",
+          "name": "randy",
+          "url": "/api/v2/users/98/"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "kind": "ATRead",
+        "start": { "value": "stage-team-0001", "match_by": "id" },
+        "end":   { "value": "17b5f0743c31cc14dfcb9d46a637fe5dcf1f9396-deception", "match_by": "id" }
+      },
+      {
+        "kind": "ATInventoryAdmin",
+        "start": { "value": "stage-team-0001", "match_by": "id" },
+        "end":   { "value": "17b5f0743c31cc14dfcb9d46a637fe5dcf1f9396-deception", "match_by": "id" }
+      },
+      {
+        "kind": "ATProjectAdmin",
+        "start": { "value": "stage-team-0001", "match_by": "id" },
+        "end":   { "value": "17b5f0743c31cc14dfcb9d46a637fe5dcf1f9396-deception", "match_by": "id" }
+      },
+      {
+        "kind": "ATJobTemplateAdmin",
+        "start": { "value": "stage-team-0001", "match_by": "id" },
+        "end":   { "value": "17b5f0743c31cc14dfcb9d46a637fe5dcf1f9396-deception", "match_by": "id" }
+      },
+      {
+        "kind": "ATCredentialAdmin",
+        "start": { "value": "stage-team-0001", "match_by": "id" },
+        "end":   { "value": "17b5f0743c31cc14dfcb9d46a637fe5dcf1f9396-deception", "match_by": "id" }
+      },
+      {
+        "kind": "ATWorkflowAdmin",
+        "start": { "value": "stage-team-0001", "match_by": "id" },
+        "end":   { "value": "17b5f0743c31cc14dfcb9d46a637fe5dcf1f9396-deception", "match_by": "id" }
+      },
+
+      {
+        "kind": "ATRead",
+        "start": { "value": "stage-team-0001", "match_by": "id" },
+        "end":   { "value": "17b5f0743c31cc14dfcb9d46a637fe5dcf1f9396", "match_by": "id" }
+      },
+
+      {
+        "kind": "ATRead",
+        "start": { "value": "stage-team-0001", "match_by": "id" },
+        "end":   { "value": "41bef9871b17b4532fffbfda3768086253c4c78c", "match_by": "id" }
+      },
+
+      {
+        "kind": "ATContains",
+        "start": { "value": "17b5f0743c31cc14dfcb9d46a637fe5dcf1f9396-deception", "match_by": "id" },
+        "end":   { "value": "deploy-stage-template-0001", "match_by": "id" }
+      },
+
+      { "kind": "ATMember",
+        "start": { "value": "f532c9b1db2c2ed16a1c043d9e9f2e3e78170d1b", "match_by": "id" },
+        "end":   { "value": "stage-team-0001", "match_by": "id" }
+      },
+      { "kind": "ATMember",
+        "start": { "value": "2e25345f4e80234aa18e13a142029b03b3dc2919", "match_by": "id" },
+        "end":   { "value": "stage-team-0001", "match_by": "id" }
+      },
+      { "kind": "ATMember",
+        "start": { "value": "0200d454b16e5a187a9c227c9228894910aa6326", "match_by": "id" },
+        "end":   { "value": "stage-team-0001", "match_by": "id" }
+      },
+      { "kind": "ATMember",
+        "start": { "value": "270996d0f6eba477cc9ebbab8039468a0989204e", "match_by": "id" },
+        "end":   { "value": "stage-team-0001", "match_by": "id" }
+      },
+      { "kind": "ATMember",
+        "start": { "value": "85396c3ee679a094da67ed40413052db0ae930e1", "match_by": "id" },
+        "end":   { "value": "stage-team-0001", "match_by": "id" }
+      },
+      { "kind": "ATMember",
+        "start": { "value": "b996409b88ef8c07d7b5c435157a3a181a95f1ed", "match_by": "id" },
+        "end":   { "value": "stage-team-0001", "match_by": "id" }
+      },
+      { "kind": "ATMember",
+        "start": { "value": "2f77f0cf6202823ec834d447e3cbb69452982e02", "match_by": "id" },
+        "end":   { "value": "stage-team-0001", "match_by": "id" }
+      },
+      { "kind": "ATMember",
+        "start": { "value": "randy-user-0001", "match_by": "id" },
+        "end":   { "value": "stage-team-0001", "match_by": "id" }
+      }
+    ]
+  }
+}
