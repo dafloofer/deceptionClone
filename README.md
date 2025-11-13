@@ -55,6 +55,9 @@ RETURN p
 
 Another noteworthy utility is merging OpenGraph collections and correlating known overlapping objects from each graph. In the following example, we use two sample deception graphs and merge them into one OpenGraph. Additionally, we correlate a node in each graph which we know represents the same object. This bridges the the two technologies and allows us to pathfind between collections.
 
+
+## Merging Graphs
+
 ```
 python deceptionClone.py merge-graphs --graph1 ./examples/gluing/github_graph.json --graph2 ./examples/gluing/ansible_graph.json --correlate R_kgDOM3LdJg::DECEPTION,randy-user-0001
 ```
